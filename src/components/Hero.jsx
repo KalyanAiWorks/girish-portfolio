@@ -89,10 +89,10 @@ const Hero = () => {
           alt="Ramesh Pittala"
         />
 
-        {/* Mobile: Profile image in black triangle section */}
+        {/* Mobile: Profile image on right side of black triangle (smaller) */}
         <img
-          className="md:hidden absolute bottom-0 ml-[50vw]
-          sm:h-[50vh] h-[45vh]"
+          className="md:hidden absolute bottom-0 right-0 w-auto max-w-[50%]
+          h-[35vh] object-cover object-right"
           src={ramesh}
           alt="Ramesh Pittala"
         />
