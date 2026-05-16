@@ -80,16 +80,22 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
-        <div>
-          <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={ramesh}
-            alt="Ramesh"
-          />
-        </div>
+        {/* Desktop: Profile image positioned in dark triangle */}
+        <img
+          className="hidden md:block absolute bottom-0 ml-[60vw]
+          lg:ml-[70vw] xl:ml-[75vw] 2xl:ml-[78vw]
+          md:h-[60vh] lg:h-[65vh] xl:h-[70vh]"
+          src={ramesh}
+          alt="Ramesh Pittala"
+        />
+
+        {/* Mobile: Profile image in black triangle section */}
+        <img
+          className="md:hidden absolute bottom-0 ml-[50vw]
+          sm:h-[50vh] h-[45vh]"
+          src={ramesh}
+          alt="Ramesh Pittala"
+        />
       </section>
     </>
   );
