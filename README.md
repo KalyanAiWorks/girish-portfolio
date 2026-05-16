@@ -1,17 +1,16 @@
-# Portfolio Template
+# Ramesh - Senior Sales Manager Portfolio
 
-https://github.com/shaqdeff/Portfolio-Template/assets/92020713/eed76a82-e59d-440b-a04c-a2dc00a508b7
+A professional portfolio showcasing the career and achievements of P. Ramesh, Senior Sales Manager at SkylineAI Nexus. This portfolio is built using the modern web technologies and demonstrates expertise in sales management, team leadership, and customer relations.
 
-![portfolio-phone](https://github.com/shaqdeff/Portfolio-Template/assets/92020713/e41ed31c-50e5-40d3-a74f-9c0eb053fe7f)
-![portfolio-phone-3](https://github.com/shaqdeff/Portfolio-Template/assets/92020713/e8c23aa7-ac27-48fc-bf66-50ab00e3a64f)
+## About
 
-I created this portfolio to use as my own but ended up doing something else entirely. However, instead of keeping it buried, I decided to put it up here on GitHub as an open-source resource to help individuals to learn, adapt, and create their own portfolios. Feel free to customize and modify the theme and components to suit your personal style and branding preferences.
+This portfolio is based on the [Portfolio Template](https://github.com/shaqdeff/Portfolio-Template) by Shaquille Ndunda. The template has been customized and adapted to showcase P. Ramesh's professional background, experience, and skills in sales and customer management.
 
 ## License and Attribution
 
-The code in this repository is released under the [MIT](https://github.com/shaqdeff/Portfolio-Template/blob/90213d4887074d1d29434f706afad3d12fa33f5f/MIT.md) License, which grants you the freedom to use, modify, and distribute the template as your own. However, if you choose to use the site's design largely unmodified, kindly credit me as the original designer of the site.
+The original portfolio template is released under the [MIT](https://github.com/shaqdeff/Portfolio-Template/blob/90213d4887074d1d29434f706afad3d12fa33f5f/MIT.md) License. Credit goes to **Shaquille Ndunda** for creating the original template design.
 
-All projects and experiences included in this portfolio are the result of my own efforts and creativity. Please refrain from presenting them as your own.
+The portfolio content, experiences, and professional information contained herein are specific to P. Ramesh and represent his individual career and achievements.
 
 ## Built With
 
@@ -81,7 +80,17 @@ npm run build
 npm run preview
 ```
 
-## Authors
+## Portfolio Owner
+
+👤 **P. Ramesh**
+
+- **Title:** Senior Sales Manager
+- **Company:** SkylineAI Nexus
+- **Email:** dxdxrandy@gmail.com
+- **Phone:** +91 9542388553
+- **Location:** Hyderabad, India
+
+## Original Template Creator
 
 👤 **Shaquille Ndunda**
 

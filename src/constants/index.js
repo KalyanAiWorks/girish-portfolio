@@ -46,225 +46,237 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Frontend Developer',
+    title: 'Sales Management',
     icon: frontend,
   },
   {
-    title: 'Backend Developer',
+    title: 'Team Leadership',
     icon: backend,
   },
   {
-    title: 'UI/UX Design',
+    title: 'Customer Relations',
     icon: ux,
   },
   {
-    title: 'Software Prototyping',
+    title: 'Process Optimization',
     icon: prototyping,
   },
 ];
 
 const technologies = [
   {
-    name: 'HTML 5',
+    name: 'Sales Strategy',
     icon: html,
   },
   {
-    name: 'CSS 3',
+    name: 'Team Management',
     icon: css,
   },
   {
-    name: 'JavaScript',
+    name: 'Customer Service',
     icon: javascript,
   },
   {
-    name: 'TypeScript',
+    name: 'Voice Process',
     icon: typescript,
   },
   {
-    name: 'React JS',
+    name: 'B2B Sales',
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
+    name: 'Excel',
     icon: redux,
   },
   {
-    name: 'Tailwind CSS',
+    name: 'PowerPoint',
     icon: tailwind,
   },
   {
-    name: 'Node JS',
+    name: 'English',
     icon: nodejs,
   },
   {
-    name: 'Rails',
+    name: 'Hindi',
     icon: rubyrails,
   },
   {
-    name: 'graphql',
+    name: 'Telugu',
     icon: graphql,
   },
   {
-    name: 'postgresql',
+    name: 'Escalation Handling',
     icon: postgresql,
   },
   {
-    name: 'git',
+    name: 'Sales Conversion',
     icon: git,
   },
   {
-    name: 'figma',
+    name: 'CRM Tools',
     icon: figma,
   },
   {
-    name: 'docker',
+    name: 'Analytics',
     icon: docker,
   },
 ];
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
+    title: 'Senior Sales Manager',
+    company_name: 'SkylineAI Nexus',
     icon: coverhunt,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: 'Present',
+    description: 'Leading sales team and managing client relationships for AI solutions platform.',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
+    title: 'Subject Matter Expert',
+    company_name: 'Tele text India Ltd',
     icon: microverse,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: 'May 2017 - Aug 2019',
+    description: 'Expert in voice process operations and customer care excellence.',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
+    title: 'Operations Executive',
+    company_name: 'AEGIS BPO Services',
     icon: kelhel,
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
+    date: 'Aug 2016 - May 2017',
+    description: 'Managed operations for business process outsourcing services.',
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
+    title: 'Rollout Executive',
+    company_name: 'Ben Franklin Opticians',
     icon: dcc,
     iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: 'Jan 2014 - Jun 2015',
+    description: 'Led rollout operations and customer engagement initiatives.',
+  },
+  {
+    title: 'Tele-Caller',
+    company_name: 'Hansa Research Group',
+    icon: dcc,
+    iconBg: '#333333',
+    date: 'Nov 2010 - Nov 2011',
+    description: 'Started career in voice process and customer interaction.',
   },
 ];
 
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'Sales Team Leadership',
+    description: 'Led high-performing sales teams at SkylineAI Nexus, driving revenue growth and customer acquisition through strategic sales initiatives and team management.',
     tags: [
       {
-        name: 'react',
+        name: 'Sales Management',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'Team Leadership',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'B2B Sales',
         color: 'pink-text-gradient',
       },
     ],
     image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    repo: '#',
+    demo: '#',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'Customer Care Excellence',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'Implemented customer care best practices at Tele text India Ltd, optimizing voice process operations and achieving superior customer satisfaction metrics.',
     tags: [
       {
-        name: 'react',
+        name: 'Customer Service',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'Voice Process',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'Operations',
         color: 'pink-text-gradient',
       },
     ],
     image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    repo: '#',
+    demo: '#',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'BPO Operations Management',
+    description: 'Managed operations at AEGIS BPO Services, streamlining processes and ensuring compliance with service level agreements.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'Operations',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'Process Optimization',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'Management',
         color: 'pink-text-gradient',
       },
     ],
     image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    repo: '#',
+    demo: '#',
   },
   {
     id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: 'Escalation & Resolution',
+    description: 'Specialized in handling complex customer escalations and delivering effective resolutions across multiple communication channels.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'Problem Solving',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'Escalation Handling',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'Communication',
         color: 'pink-text-gradient',
       },
     ],
     image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
+    repo: '#',
+    demo: '#',
   },
   {
     id: 'project-5',
-    name: 'Nyeusi Fest Site',
+    name: 'Sales Conversion Optimization',
     description:
-      'This is a demo concert website for a music festival called Nyeusi.',
+      'Developed and implemented sales conversion strategies resulting in significant revenue improvement and customer retention.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'Sales Strategy',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'Analytics',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'Performance',
         color: 'pink-text-gradient',
       },
     ],
     image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    repo: '#',
+    demo: '#',
   },
 ];
 
