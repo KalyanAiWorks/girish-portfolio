@@ -3,7 +3,7 @@ import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
-import ramesh from './personal/shaq.png';
+import ramesh from './ramesh.jpg';
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
