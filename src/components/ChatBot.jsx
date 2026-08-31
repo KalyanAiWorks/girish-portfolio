@@ -231,7 +231,7 @@ Phone: +91 7675062526`;
                     />
 
                     <p className="text-[11px] text-white/50">
-                      Resume Assistant • Online
+                      AI Assistant • Online
                     </p>
                   </div>
                 </div>
