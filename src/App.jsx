@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
+import ChatBot from './components/ChatBot';
 import {
   About,
   Contact,
@@ -40,6 +41,8 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
         </div>
+
+        <ChatBot />
       </div>
     </BrowserRouter>
   );
