@@ -21,7 +21,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}>
           <div className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] bg-gradient-to-r from-french to-taupe rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold sm:text-[28px] text-[24px] font-arenq">R</span>
+            <span className="text-white font-bold sm:text-[28px] text-[24px] font-arenq">G</span>
           </div>
           <span className="sm:text-[20px] text-[16px] font-bold font-poppins text-eerieBlack uppercase hidden sm:block">Girish</span>
         </Link>
