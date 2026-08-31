@@ -17,6 +17,33 @@ const Tech = () => {
     { emoji: '🔍', name: 'Market Research' },
   ];
 
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const skillVariants = {
+    hidden: {
+      opacity: 0,
+      y: 35,
+      scale: 0.95,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 12,
+      },
+    },
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -24,19 +51,41 @@ const Tech = () => {
         <h2 className={styles.sectionHeadTextLight}>Skills.</h2>
       </motion.div>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 mt-14 w-full">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+        className="flex flex-wrap justify-center items-center gap-4 mt-14 w-full"
+      >
         {skills.map((skill) => (
-          <div
+          <motion.div
             key={skill.name}
-            className="px-6 py-3 bg-jet border border-jetGray rounded-lg hover:border-french hover:bg-jetLight transition-all duration-300 hover:scale-105"
+            variants={skillVariants}
+            whileHover={{
+              y: -7,
+              scale: 1.06,
+              boxShadow: '0 0 28px rgba(139, 92, 246, 0.45)',
+            }}
+            transition={{ duration: 0.25 }}
+            className="px-6 py-3 bg-jet border border-jetGray rounded-lg hover:border-french cursor-default"
           >
             <p className="text-timberWolf text-[14px] sm:text-[16px] font-medium font-poppins whitespace-nowrap">
-              <span className="text-[18px] sm:text-[20px] mr-2">{skill.emoji}</span>
+              <motion.span
+                className="text-[18px] sm:text-[20px] mr-2 inline-block"
+                whileHover={{
+                  rotate: [0, -12, 12, -8, 8, 0],
+                  scale: 1.2,
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                {skill.emoji}
+              </motion.span>
               {skill.name}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
