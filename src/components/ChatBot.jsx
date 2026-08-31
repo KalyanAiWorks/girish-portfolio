@@ -6,9 +6,16 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([
     {
       type: 'bot',
-      text: "Hi! I'm Girish's portfolio assistant. Ask me about his experience, skills, ERP expertise, companies, education, or contact details.",
+      text: "Hello — I’m Girish’s portfolio assistant. Ask me about his experience, skills, ERP expertise, companies, education, or contact details.",
     },
   ]);
+
+  const suggestions = [
+    'What are Girish’s skills?',
+    'How much experience does Girish have?',
+    'Which companies did he work at?',
+    'How can I contact Girish?',
+  ];
 
   const getAnswer = (question) => {
     const q = question.toLowerCase();
@@ -56,7 +63,7 @@ const ChatBot = () => {
 • Market Research & Analysis
 • Pre-Sales & Post-Sales
 • B2B Marketing Strategy
-• Product Demonstrations
+• Product Demonstration
 • Industry Mapping`;
     }
 
@@ -68,7 +75,7 @@ const ChatBot = () => {
       q.includes('d365') ||
       q.includes('microsoft')
     ) {
-      return "Girish has business development experience with Oracle, Oracle NetSuite ERP, SAP, Microsoft Dynamics 365 and related enterprise solutions.";
+      return "Girish has business development experience with Oracle, Oracle NetSuite ERP, SAP, Microsoft Dynamics 365, and enterprise solution sales.";
     }
 
     if (
@@ -77,7 +84,7 @@ const ChatBot = () => {
       q.includes('hubspot') ||
       q.includes('zoho')
     ) {
-      return "Girish has experience managing prospect databases and sales activities using Salesforce, ZOHO CRM and HubSpot, along with ERP and CRM-driven customer analysis.";
+      return "Girish has experience using Salesforce, ZOHO CRM, and HubSpot, along with ERP and CRM-driven customer analysis and pipeline management.";
     }
 
     if (
@@ -86,7 +93,7 @@ const ChatBot = () => {
       q.includes('cold call') ||
       q.includes('email campaign')
     ) {
-      return "Girish has strong inside-sales and lead-generation experience using cold calling, email campaigns, social media marketing, account research, prospecting and market intelligence to build sales pipelines.";
+      return "Girish has strong inside-sales and lead-generation experience using cold calling, email campaigns, prospect research, social media outreach, and market intelligence to build qualified pipelines.";
     }
 
     if (
@@ -111,35 +118,35 @@ Phone: +91 7675062526`;
     }
 
     if (q.includes('forsys')) {
-      return "At Forsys, Inc., Girish worked as Business Development Manager for Salesforce, Oracle and Oracle NetSuite ERP solutions from December 2023 to March 2025.";
+      return "At Forsys, Inc., Girish worked as Business Development Manager for Salesforce, Oracle, and Oracle NetSuite ERP solutions from December 2023 to March 2025.";
     }
 
     if (q.includes('prospecta')) {
-      return "At Prospecta Software, Girish worked as Business Development Manager for SAP, Oracle and Oracle NetSuite ERP from August 2022 to December 2023.";
+      return "At Prospecta Software, Girish worked as Business Development Manager for SAP, Oracle, and Oracle NetSuite ERP from August 2022 to December 2023.";
     }
 
     if (q.includes('valuelabs')) {
-      return "At ValueLabs, Girish managed business development across SAP, Microsoft D365, Oracle and Oracle NetSuite ERP from April 2021 to March 2022.";
+      return "At ValueLabs, Girish managed business development across SAP, Microsoft D365, Oracle, and Oracle NetSuite ERP from April 2021 to March 2022.";
     }
 
-    return `I can answer questions about Girish's:
+    return `I can help with:
 
 • Experience
-• Companies
 • Skills
-• Oracle NetSuite / SAP / D365
+• Companies
+• ERP expertise
 • Salesforce / CRM
-• Lead Generation
+• Lead generation
 • Education
 • Contact details
 
-Try asking: "What are Girish's skills?"`;
+Try: "What are Girish’s skills?"`;
   };
 
-  const sendMessage = () => {
-    if (!input.trim()) return;
+  const sendMessage = (customText) => {
+    const question = (customText || input).trim();
+    if (!question) return;
 
-    const question = input.trim();
     const answer = getAnswer(question);
 
     setMessages((prev) => [
@@ -152,49 +159,62 @@ Try asking: "What are Girish's skills?"`;
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      sendMessage();
-    }
+    if (e.key === 'Enter') sendMessage();
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999]">
       {open && (
-        <div className="mb-4 w-[340px] sm:w-[380px] h-[500px] bg-[#111111] border border-[#6c63ff]/40 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+        <div className="mb-4 w-[340px] sm:w-[390px] h-[540px] overflow-hidden rounded-[24px] border border-white/10 bg-black/85 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.55)] flex flex-col">
 
-          <div className="px-5 py-4 bg-[#171717] border-b border-white/10 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold text-[17px]">
-                Ask Girish
-              </h3>
-              <p className="text-gray-400 text-[11px]">
-                Resume Assistant
-              </p>
+          <div className="border-b border-white/10 bg-white/[0.03] px-5 py-4">
+            <div className="flex items-start justify-between">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.25em] text-white/45">
+                  Premium Resume Assistant
+                </p>
+                <h3 className="mt-1 text-white text-[18px] font-semibold">
+                  Ask Girish
+                </h3>
+                <p className="mt-1 text-[12px] text-white/55">
+                  Business Development • ERP Sales • Client Relations
+                </p>
+              </div>
+
+              <button
+                onClick={() => setOpen(false)}
+                className="h-9 w-9 rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white"
+              >
+                ×
+              </button>
             </div>
-
-            <button
-              onClick={() => setOpen(false)}
-              className="text-gray-400 hover:text-white text-xl"
-            >
-              ×
-            </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div className="px-4 pt-3 pb-2 border-b border-white/10">
+            <div className="flex flex-wrap gap-2">
+              {suggestions.map((item) => (
+                <button
+                  key={item}
+                  onClick={() => sendMessage(item)}
+                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] text-white/75 transition hover:bg-white/[0.08] hover:text-white"
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
             {messages.map((message, index) => (
               <div
                 key={index}
-                className={`flex ${
-                  message.type === 'user'
-                    ? 'justify-end'
-                    : 'justify-start'
-                }`}
+                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[85%] px-4 py-3 rounded-xl text-[13px] leading-relaxed whitespace-pre-line ${
+                  className={`max-w-[86%] whitespace-pre-line rounded-2xl px-4 py-3 text-[13px] leading-6 ${
                     message.type === 'user'
-                      ? 'bg-[#6c63ff] text-white'
-                      : 'bg-[#202020] text-gray-200'
+                      ? 'bg-white text-black shadow-md'
+                      : 'border border-white/10 bg-white/[0.05] text-white/85'
                   }`}
                 >
                   {message.text}
@@ -203,22 +223,21 @@ Try asking: "What are Girish's skills?"`;
             ))}
           </div>
 
-          <div className="p-3 border-t border-white/10 bg-[#171717]">
-            <div className="flex gap-2">
+          <div className="border-t border-white/10 bg-white/[0.03] p-3">
+            <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-2">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask about Girish..."
-                className="flex-1 bg-[#252525] text-white text-[13px] px-4 py-3 rounded-xl outline-none border border-white/10 focus:border-[#6c63ff]"
+                className="flex-1 bg-transparent px-3 py-2 text-[13px] text-white placeholder:text-white/35 outline-none"
               />
-
               <button
-                onClick={sendMessage}
-                className="bg-[#6c63ff] hover:scale-105 transition-transform text-white px-4 rounded-xl font-semibold"
+                onClick={() => sendMessage()}
+                className="rounded-xl bg-white px-4 py-2 text-[13px] font-semibold text-black transition hover:scale-105"
               >
-                ➤
+                Send
               </button>
             </div>
           </div>
@@ -227,10 +246,10 @@ Try asking: "What are Girish's skills?"`;
 
       <button
         onClick={() => setOpen(!open)}
-        className="w-16 h-16 rounded-full bg-[#6c63ff] text-white shadow-[0_0_30px_rgba(108,99,255,0.5)] hover:scale-110 transition-transform flex items-center justify-center text-2xl"
+        className="group flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-black/85 text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] backdrop-blur-md transition hover:scale-110"
         aria-label="Ask Girish"
       >
-        {open ? '×' : '💬'}
+        <span className="text-2xl">{open ? '×' : '💬'}</span>
       </button>
     </div>
   );
