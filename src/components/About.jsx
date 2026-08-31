@@ -37,7 +37,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Experienced Senior Sales Manager with a strong track record in voice process, customer care, and B2B sales. Proficient in team management, escalation handling, and sales conversion optimization. Fluent in English, Hindi, and Telugu with 5.5+ years of professional experience. Skilled in leveraging Excel and PowerPoint for data-driven decision making and presentation excellence. Proven ability to lead high-performing teams and deliver exceptional customer satisfaction while exceeding sales targets.
+        Result-oriented Sales & Business Development professional with 10 years of experience across Salesforce, Oracle, Oracle NetSuite ERP, SAP, and Microsoft D365. Skilled in strategy building for new product launches, client relationship management, and pre-sales to post-sales cycles. Proven track record in lead generation, market research, and closing enterprise deals with C-level decision makers using tools like Salesforce, ZOHO CRM, HubSpot, ZoomInfo, and Lusha.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

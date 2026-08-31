@@ -5,16 +5,16 @@ import { textVariant, fadeIn } from '../utils/motion';
 
 const Tech = () => {
   const skills = [
-    { emoji: '💰', name: 'Sales & BD' },
-    { emoji: '📞', name: 'Voice Process' },
-    { emoji: '🤝', name: 'Customer Service' },
-    { emoji: '👥', name: 'Team Leadership' },
-    { emoji: '🚨', name: 'Escalation Handling' },
-    { emoji: '📊', name: 'Sales Reporting' },
-    { emoji: '📑', name: 'Microsoft Excel' },
-    { emoji: '📽️', name: 'PowerPoint' },
-    { emoji: '🗣️', name: 'English / Hindi / Telugu' },
-    { emoji: '🌐', name: 'B2B Outreach' },
+    { emoji: '💼', name: 'Business Development' },
+    { emoji: '🏢', name: 'Salesforce' },
+    { emoji: '⚙️', name: 'Oracle NetSuite ERP' },
+    { emoji: '🔷', name: 'SAP' },
+    { emoji: '🪟', name: 'Microsoft D365' },
+    { emoji: '📇', name: 'ZOHO CRM / HubSpot' },
+    { emoji: '📞', name: 'Cold Calling' },
+    { emoji: '📧', name: 'Email Campaigns' },
+    { emoji: '🎯', name: 'Lead Generation' },
+    { emoji: '🔍', name: 'Market Research' },
   ];
 
   return (

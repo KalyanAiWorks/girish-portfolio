@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { ramesh, bwmap, worldmap } from '../assets';
+import { girish, bwmap, worldmap } from '../assets';
 
 const Hero = () => {
   return (
@@ -42,12 +42,12 @@ const Hero = () => {
                 className="sm:text-battleGray sm:text-[90px]
                 text-eerieBlack text-[50px] font-mova
                 font-extrabold uppercase">
-                Ramesh Pittala
+                Girish Kumar
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Senior Sales Manager | 5.5+ Years Experience <br className="sm:block hidden" />
-              Voice Process | Customer Care | B2B Sales
+              Business Development Manager | 10+ Years Experience <br className="sm:block hidden" />
+              ERP Sales | Salesforce, Oracle, SAP | Client Relations
             </p>
           </div>
           <div
@@ -82,19 +82,19 @@ const Hero = () => {
 
         {/* Desktop: Profile image positioned in dark triangle */}
         <img
-          className="hidden md:block absolute bottom-0 ml-[60vw]
-          lg:ml-[70vw] xl:ml-[75vw] 2xl:ml-[78vw]
+          className="hidden md:block absolute bottom-0 ml-[50vw]
+          lg:ml-[58vw] xl:ml-[63vw] 2xl:ml-[66vw]
           md:h-[60vh] lg:h-[65vh] xl:h-[70vh]"
-          src={ramesh}
-          alt="Ramesh Pittala"
+          src={girish}
+          alt="Girish Kumar"
         />
 
         {/* Mobile: Profile image on right side of black triangle (smaller) */}
         <img
           className="md:hidden absolute bottom-0 right-0 w-auto max-w-[50%]
           h-[35vh] object-cover object-right"
-          src={ramesh}
-          alt="Ramesh Pittala"
+          src={girish}
+          alt="Girish Kumar"
         />
       </section>
     </>

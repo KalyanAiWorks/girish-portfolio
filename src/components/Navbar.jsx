@@ -23,7 +23,7 @@ const Navbar = () => {
           <div className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] bg-gradient-to-r from-french to-taupe rounded-lg flex items-center justify-center">
             <span className="text-white font-bold sm:text-[28px] text-[24px] font-arenq">R</span>
           </div>
-          <span className="sm:text-[20px] text-[16px] font-bold font-poppins text-eerieBlack uppercase hidden sm:block">Ramesh</span>
+          <span className="sm:text-[20px] text-[16px] font-bold font-poppins text-eerieBlack uppercase hidden sm:block">Girish</span>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (

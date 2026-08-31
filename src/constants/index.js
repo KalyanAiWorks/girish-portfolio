@@ -30,159 +30,103 @@ import {
 } from '../assets';
 
 export const navLinks = [
-  {
-    id: 'about',
-    title: 'About',
-  },
-  {
-    id: 'projects',
-    title: 'Projects',
-  },
-  {
-    id: 'contact',
-    title: 'Contact',
-  },
+  { id: 'about', title: 'About' },
+  { id: 'projects', title: 'Projects' },
+  { id: 'contact', title: 'Contact' },
 ];
 
 const services = [
-  {
-    title: 'Sales Management',
-    icon: frontend,
-  },
-  {
-    title: 'Team Leadership',
-    icon: backend,
-  },
-  {
-    title: 'Customer Relations',
-    icon: ux,
-  },
-  {
-    title: 'Process Optimization',
-    icon: prototyping,
-  },
+  { title: 'Business Development', icon: frontend },
+  { title: 'Client Relationship Mgmt', icon: backend },
+  { title: 'Pre-Sales & Post-Sales', icon: ux },
+  { title: 'Market Research & Analysis', icon: prototyping },
 ];
 
 const technologies = [
-  {
-    name: 'Sales Strategy',
-    icon: html,
-  },
-  {
-    name: 'Team Management',
-    icon: css,
-  },
-  {
-    name: 'Customer Service',
-    icon: javascript,
-  },
-  {
-    name: 'Voice Process',
-    icon: typescript,
-  },
-  {
-    name: 'B2B Sales',
-    icon: reactjs,
-  },
-  {
-    name: 'Excel',
-    icon: redux,
-  },
-  {
-    name: 'PowerPoint',
-    icon: tailwind,
-  },
-  {
-    name: 'English',
-    icon: nodejs,
-  },
-  {
-    name: 'Hindi',
-    icon: rubyrails,
-  },
-  {
-    name: 'Telugu',
-    icon: graphql,
-  },
-  {
-    name: 'Escalation Handling',
-    icon: postgresql,
-  },
-  {
-    name: 'Sales Conversion',
-    icon: git,
-  },
-  {
-    name: 'CRM Tools',
-    icon: figma,
-  },
-  {
-    name: 'Analytics',
-    icon: docker,
-  },
+  { name: 'Salesforce', icon: html },
+  { name: 'Oracle NetSuite ERP', icon: css },
+  { name: 'SAP', icon: javascript },
+  { name: 'Microsoft D365', icon: typescript },
+  { name: 'ZOHO CRM', icon: reactjs },
+  { name: 'HubSpot', icon: redux },
+  { name: 'LinkedIn Sales Navigator', icon: tailwind },
+  { name: 'ZoomInfo', icon: nodejs },
+  { name: 'Lusha', icon: rubyrails },
+  { name: 'Cold Calling', icon: graphql },
+  { name: 'Lead Generation', icon: postgresql },
+  { name: 'Account Management', icon: git },
+  { name: 'Email Campaigns', icon: figma },
+  { name: 'Market Intelligence', icon: docker },
 ];
 
 const experiences = [
   {
-    title: 'Senior Sales Manager',
-    company_name: 'SkylineAI Nexus',
+    title: 'Business Development Manager',
+    company_name: 'Riveron',
     icon: coverhunt,
     iconBg: '#333333',
-    date: 'Present',
-    description: 'Leading sales team and managing client relationships for AI solutions platform.',
+    date: 'Aug 2025 - Present',
+    description: 'Driving business development and client acquisition initiatives at Riveron.',
   },
   {
-    title: 'Subject Matter Expert',
-    company_name: 'Tele text India Ltd',
+    title: 'Business Development Manager',
+    company_name: 'Forsys, Inc.',
+    icon: coverhunt,
+    iconBg: '#333333',
+    date: 'Dec 2023 - Mar 2025',
+    description: 'Led business development for Oracle and Oracle NetSuite ERP solutions. Drove client acquisition and revenue growth through strategic partnerships and consultative selling.',
+  },
+  {
+    title: 'Business Development Manager',
+    company_name: 'Prospecta Software',
     icon: microverse,
     iconBg: '#333333',
-    date: 'May 2017 - Aug 2019',
-    description: 'Expert in voice process operations and customer care excellence.',
+    date: 'Aug 2022 - Dec 2023',
+    description: 'Managed end-to-end business development for SAP, Oracle, and Oracle NetSuite ERP portfolios. Built strong client relationships with solution architects and delivery teams.',
   },
   {
-    title: 'Operations Executive',
-    company_name: 'AEGIS BPO Services',
+    title: 'Business Development Manager (Contract)',
+    company_name: 'Speridian Technologies',
     icon: kelhel,
     iconBg: '#333333',
-    date: 'Aug 2016 - May 2017',
-    description: 'Managed operations for business process outsourcing services.',
+    date: 'May 2022 - Oct 2022',
+    description: 'Spearheaded sales efforts for ERP solutions. Focused on lead generation, client engagement, and closing key deals.',
   },
   {
-    title: 'Rollout Executive',
-    company_name: 'Ben Franklin Opticians',
+    title: 'Business Development Manager',
+    company_name: 'ValueLabs',
     icon: dcc,
     iconBg: '#333333',
-    date: 'Jan 2014 - Jun 2015',
-    description: 'Led rollout operations and customer engagement initiatives.',
+    date: 'Apr 2021 - Mar 2022',
+    description: 'Managed diverse ERP portfolio including SAP, Microsoft D365, Oracle, and NetSuite. Expanded market presence and built enterprise relationships.',
   },
   {
-    title: 'Tele-Caller',
-    company_name: 'Hansa Research Group',
+    title: 'Sr. Business Development Executive',
+    company_name: 'Idexcel Technologies Pvt Ltd',
     icon: dcc,
     iconBg: '#333333',
-    date: 'Nov 2010 - Nov 2011',
-    description: 'Started career in voice process and customer interaction.',
+    date: 'Nov 2019 - Jan 2021',
+    description: 'Focused on mid to enterprise-level clients with ERP needs. Supported pre-sales, proposal creation, and contract negotiations.',
+  },
+  {
+    title: 'Business Development Executive',
+    company_name: 'The Global Associates',
+    icon: dcc,
+    iconBg: '#333333',
+    date: 'Aug 2016 - Jul 2019',
+    description: 'Worked across multiple verticals to generate leads and qualify opportunities. Developed foundational sales skills and ERP domain knowledge.',
   },
 ];
 
 const projects = [
   {
     id: 'project-1',
-    name: 'Sales Team Leadership',
-    description: 'Led high-performing sales teams at SkylineAI Nexus, driving revenue growth and customer acquisition through strategic sales initiatives and team management.',
+    name: 'ERP Portfolio Growth - Forsys',
+    description: 'Led business development initiatives focused on Oracle and Oracle NetSuite ERP, driving client acquisition through consultative selling and strategic partnerships.',
     tags: [
-      {
-        name: 'Sales Management',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Team Leadership',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'B2B Sales',
-        color: 'pink-text-gradient',
-      },
+      { name: 'Business Development', color: 'blue-text-gradient' },
+      { name: 'Oracle NetSuite', color: 'green-text-gradient' },
+      { name: 'Consultative Selling', color: 'pink-text-gradient' },
     ],
     image: komikult,
     repo: '#',
@@ -190,22 +134,12 @@ const projects = [
   },
   {
     id: 'project-2',
-    name: 'Customer Care Excellence',
-    description:
-      'Implemented customer care best practices at Tele text India Ltd, optimizing voice process operations and achieving superior customer satisfaction metrics.',
+    name: 'Multi-ERP Client Management',
+    description: 'Managed SAP, Microsoft D365, Oracle and NetSuite portfolios at ValueLabs, expanding enterprise relationships and market presence.',
     tags: [
-      {
-        name: 'Customer Service',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Voice Process',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'Operations',
-        color: 'pink-text-gradient',
-      },
+      { name: 'SAP', color: 'blue-text-gradient' },
+      { name: 'Microsoft D365', color: 'green-text-gradient' },
+      { name: 'Enterprise Sales', color: 'pink-text-gradient' },
     ],
     image: leaderboard,
     repo: '#',
@@ -213,21 +147,12 @@ const projects = [
   },
   {
     id: 'project-3',
-    name: 'BPO Operations Management',
-    description: 'Managed operations at AEGIS BPO Services, streamlining processes and ensuring compliance with service level agreements.',
+    name: 'CRM & ERP Data Integration',
+    description: 'Integrated CRM functionality with ERP insights (Salesforce, ZOHO, HubSpot) to generate accurate sales forecasts and unify sales, inventory, and customer service data.',
     tags: [
-      {
-        name: 'Operations',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Process Optimization',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'Management',
-        color: 'pink-text-gradient',
-      },
+      { name: 'Salesforce', color: 'blue-text-gradient' },
+      { name: 'Data Analysis', color: 'green-text-gradient' },
+      { name: 'Sales Forecasting', color: 'pink-text-gradient' },
     ],
     image: math,
     repo: '#',
@@ -235,21 +160,12 @@ const projects = [
   },
   {
     id: 'project-4',
-    name: 'Escalation & Resolution',
-    description: 'Specialized in handling complex customer escalations and delivering effective resolutions across multiple communication channels.',
+    name: 'Lead Generation Pipeline',
+    description: 'Built prospect database and inside-sales pipeline using email campaigns, cold calling, and social media prospecting across IT Services, Financial Services, Telecom and Automobile verticals.',
     tags: [
-      {
-        name: 'Problem Solving',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Escalation Handling',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'Communication',
-        color: 'pink-text-gradient',
-      },
+      { name: 'Lead Generation', color: 'blue-text-gradient' },
+      { name: 'Inside Sales', color: 'green-text-gradient' },
+      { name: 'Prospecting', color: 'pink-text-gradient' },
     ],
     image: movie,
     repo: '#',
@@ -257,22 +173,12 @@ const projects = [
   },
   {
     id: 'project-5',
-    name: 'Sales Conversion Optimization',
-    description:
-      'Developed and implemented sales conversion strategies resulting in significant revenue improvement and customer retention.',
+    name: 'Pre-Sales & Proposal Strategy',
+    description: 'Designed viable solutions based on customer requirements, built business proposals, and managed the full pre-sales cycle from qualification to product demonstration.',
     tags: [
-      {
-        name: 'Sales Strategy',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Analytics',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'Performance',
-        color: 'pink-text-gradient',
-      },
+      { name: 'Pre-Sales', color: 'blue-text-gradient' },
+      { name: 'Proposals', color: 'green-text-gradient' },
+      { name: 'Product Demo', color: 'pink-text-gradient' },
     ],
     image: nyeusi,
     repo: '#',
