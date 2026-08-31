@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ChatBot = () => {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState('');
+  const [typing, setTyping] = useState(false);
+
   const [messages, setMessages] = useState([
     {
       type: 'bot',
@@ -138,24 +141,29 @@ Phone: +91 7675062526`;
 • Salesforce / CRM
 • Lead generation
 • Education
-• Contact details
-
-Try: "What are Girish’s skills?"`;
+• Contact details`;
   };
 
   const sendMessage = (customText) => {
     const question = (customText || input).trim();
-    if (!question) return;
-
-    const answer = getAnswer(question);
+    if (!question || typing) return;
 
     setMessages((prev) => [
       ...prev,
       { type: 'user', text: question },
-      { type: 'bot', text: answer },
     ]);
 
     setInput('');
+    setTyping(true);
+
+    setTimeout(() => {
+      setMessages((prev) => [
+        ...prev,
+        { type: 'bot', text: getAnswer(question) },
+      ]);
+
+      setTyping(false);
+    }, 850);
   };
 
   const handleKeyDown = (e) => {
@@ -164,93 +172,266 @@ Try: "What are Girish’s skills?"`;
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999]">
-      {open && (
-        <div className="mb-4 w-[340px] sm:w-[390px] h-[540px] overflow-hidden rounded-[24px] border border-white/10 bg-black/85 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.55)] flex flex-col">
 
-          <div className="border-b border-white/10 bg-white/[0.03] px-5 py-4">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-white/45">
-                  Premium Resume Assistant
-                </p>
-                <h3 className="mt-1 text-white text-[18px] font-semibold">
-                  Ask Girish
-                </h3>
-                <p className="mt-1 text-[12px] text-white/55">
-                  Business Development • ERP Sales • Client Relations
-                </p>
-              </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.7,
+              y: 80,
+              x: 30,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              x: 0,
+            }}
+            exit={{
+              opacity: 0,
+              scale: 0.8,
+              y: 50,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 260,
+              damping: 22,
+            }}
+            className="mb-4 w-[340px] sm:w-[390px] h-[540px] overflow-hidden rounded-[24px] border border-white/10 bg-black/90 backdrop-blur-xl shadow-[0_25px_80px_rgba(0,0,0,0.65)] flex flex-col"
+          >
 
-              <button
-                onClick={() => setOpen(false)}
-                className="h-9 w-9 rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white"
-              >
-                ×
-              </button>
-            </div>
-          </div>
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="border-b border-white/10 bg-white/[0.03] px-5 py-4"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/40">
+                    Portfolio Intelligence
+                  </p>
 
-          <div className="px-4 pt-3 pb-2 border-b border-white/10">
-            <div className="flex flex-wrap gap-2">
-              {suggestions.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => sendMessage(item)}
-                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] text-white/75 transition hover:bg-white/[0.08] hover:text-white"
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          </div>
+                  <h3 className="mt-1 text-white text-[19px] font-semibold">
+                    Ask Girish
+                  </h3>
 
-          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
-                <div
-                  className={`max-w-[86%] whitespace-pre-line rounded-2xl px-4 py-3 text-[13px] leading-6 ${
-                    message.type === 'user'
-                      ? 'bg-white text-black shadow-md'
-                      : 'border border-white/10 bg-white/[0.05] text-white/85'
-                  }`}
-                >
-                  {message.text}
+                  <div className="mt-1 flex items-center gap-2">
+                    <motion.span
+                      animate={{
+                        opacity: [0.4, 1, 0.4],
+                        scale: [0.8, 1.1, 0.8],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                      }}
+                      className="w-2 h-2 bg-white rounded-full"
+                    />
+
+                    <p className="text-[11px] text-white/50">
+                      Resume Assistant • Online
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
 
-          <div className="border-t border-white/10 bg-white/[0.03] p-3">
-            <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-2">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder="Ask about Girish..."
-                className="flex-1 bg-transparent px-3 py-2 text-[13px] text-white placeholder:text-white/35 outline-none"
-              />
-              <button
-                onClick={() => sendMessage()}
-                className="rounded-xl bg-white px-4 py-2 text-[13px] font-semibold text-black transition hover:scale-105"
-              >
-                Send
-              </button>
+                <motion.button
+                  whileHover={{ rotate: 90, scale: 1.1 }}
+                  whileTap={{ scale: 0.85 }}
+                  onClick={() => setOpen(false)}
+                  className="h-9 w-9 rounded-full border border-white/10 bg-white/5 text-white/70 hover:bg-white/10"
+                >
+                  ×
+                </motion.button>
+              </div>
+            </motion.div>
+
+            <div className="px-4 pt-3 pb-2 border-b border-white/10">
+              <div className="flex flex-wrap gap-2">
+                {suggestions.map((item, index) => (
+                  <motion.button
+                    key={item}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.15 + index * 0.07,
+                    }}
+                    whileHover={{
+                      y: -2,
+                      scale: 1.03,
+                    }}
+                    whileTap={{ scale: 0.96 }}
+                    onClick={() => sendMessage(item)}
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] text-white/70 hover:bg-white/[0.09] hover:text-white"
+                  >
+                    {item}
+                  </motion.button>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
+
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+              <AnimatePresence>
+                {messages.map((message, index) => (
+                  <motion.div
+                    key={`${index}-${message.text}`}
+                    initial={{
+                      opacity: 0,
+                      y: 15,
+                      scale: 0.95,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                    className={`flex ${
+                      message.type === 'user'
+                        ? 'justify-end'
+                        : 'justify-start'
+                    }`}
+                  >
+                    <div
+                      className={`max-w-[86%] whitespace-pre-line rounded-2xl px-4 py-3 text-[13px] leading-6 ${
+                        message.type === 'user'
+                          ? 'bg-white text-black shadow-lg'
+                          : 'border border-white/10 bg-white/[0.05] text-white/85'
+                      }`}
+                    >
+                      {message.text}
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+
+              {typing && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex justify-start"
+                >
+                  <div className="flex items-center gap-1.5 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-4">
+
+                    {[0, 1, 2].map((i) => (
+                      <motion.span
+                        key={i}
+                        animate={{
+                          y: [0, -5, 0],
+                          opacity: [0.35, 1, 0.35],
+                        }}
+                        transition={{
+                          duration: 0.65,
+                          repeat: Infinity,
+                          delay: i * 0.15,
+                        }}
+                        className="w-1.5 h-1.5 rounded-full bg-white"
+                      />
+                    ))}
+
+                  </div>
+                </motion.div>
+              )}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              className="border-t border-white/10 bg-white/[0.03] p-3"
+            >
+              <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-2">
+
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask about Girish..."
+                  className="flex-1 bg-transparent px-3 py-2 text-[13px] text-white placeholder:text-white/30 outline-none"
+                />
+
+                <motion.button
+                  whileHover={{
+                    scale: 1.06,
+                    y: -1,
+                  }}
+                  whileTap={{
+                    scale: 0.92,
+                  }}
+                  onClick={() => sendMessage()}
+                  className="rounded-xl bg-white px-4 py-2 text-[13px] font-semibold text-black"
+                >
+                  Send
+                </motion.button>
+
+              </div>
+            </motion.div>
+
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {!open && (
+        <motion.div
+          className="absolute inset-0 rounded-full border border-white/30"
+          animate={{
+            scale: [1, 1.6],
+            opacity: [0.5, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeOut',
+          }}
+        />
       )}
 
-      <button
+      <motion.button
+        animate={
+          open
+            ? {}
+            : {
+                y: [0, -5, 0],
+              }
+        }
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        whileHover={{
+          scale: 1.12,
+          rotate: -4,
+        }}
+        whileTap={{
+          scale: 0.88,
+        }}
         onClick={() => setOpen(!open)}
-        className="group flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-black/85 text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] backdrop-blur-md transition hover:scale-110"
+        className="relative flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-black/90 text-white shadow-[0_15px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl"
         aria-label="Ask Girish"
       >
-        <span className="text-2xl">{open ? '×' : '💬'}</span>
-      </button>
+        <motion.span
+          animate={
+            open
+              ? { rotate: 180 }
+              : {
+                  scale: [1, 1.12, 1],
+                }
+          }
+          transition={{
+            duration: 1.8,
+            repeat: open ? 0 : Infinity,
+          }}
+          className="text-2xl"
+        >
+          {open ? '×' : '💬'}
+        </motion.span>
+      </motion.button>
+
     </div>
   );
 };
